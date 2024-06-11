@@ -1,0 +1,10 @@
+def connection():
+    server = 'localhost'
+    database = 'project'
+    user = 'root'
+    password = 'root'
+    driver = '{MySQL ODBC 8.4 Unicode Driver}'
+     
+    connection_string = f"Driver={driver};Server={server};Database={database};UID={user};PWD={password}"
+    conn = pyodbc.connect(connection_string, autocommit=True)
+    return conn
